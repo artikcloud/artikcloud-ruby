@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.artik.cloud/v1.1/users/04ddbd35d57d4d7b8f07f219c44457b2/rules
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer fa460261b858484583097ecb331faaa8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Rate-Limit-Limit:
+      - 100/1000
+      X-Rate-Limit-Reset:
+      - 1472706034/1472774400
+      X-Rate-Limit-Remaining:
+      - 99/998
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Date:
+      - Thu, 01 Sep 2016 04:59:34 GMT
+      Content-Length:
+      - '1053'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"total":1,"offset":0,"count":1,"data":[{"uid":"04ddbd35d57d4d7b8f07f219c44457b2","id":"b00ae40f52cd41faa0c402cf1ffbc83f","aid":"b6951bf387b84f63b38911ae35d65e28","name":"ABC","languageVersion":1,"rule":{"if":{"and":[{"sdid":"deea2ca077b94d2db337722e28b41287","field":"stepCount","operator":"<=","operand":{"value":80}},{"sdid":"510029a262524bcc909363e750bf945e","field":"weight","operator":"is
+        in message"}]},"then":[{"ddid":"993925c3cd994bf7a51c620884be65e9","action":"setText","parameters":{"text":{"value":"Uh-oh"}}}]},"enabled":true,"index":0,"createdOn":1457466383313,"modifiedOn":1457466383313,"isTestable":false,"description":"My
+        Name","invalidatedOn":1460418141979,"error":{"code":4001,"message":"Validation
+        Error","errors":[[{"field":"rule.if.and.0.sdid","messages":["Device \"deea2ca077b94d2db337722e28b41287\"
+        does not exist"]},{"field":"rule.if.and.1.sdid","messages":["Device \"510029a262524bcc909363e750bf945e\"
+        does not exist"]},{"field":"rule.then.0.ddid","messages":["Device \"993925c3cd994bf7a51c620884be65e9\"
+        does not exist"]}]]}}]}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 04:59:34 GMT
+recorded_with: VCR 3.0.3

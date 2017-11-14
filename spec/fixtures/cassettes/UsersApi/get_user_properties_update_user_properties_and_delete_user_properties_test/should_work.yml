@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.artik.cloud/v1.1/users/04ddbd35d57d4d7b8f07f219c44457b2/properties?aid=b6951bf387b84f63b38911ae35d65e28
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer fa460261b858484583097ecb331faaa8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Rate-Limit-Limit:
+      - 100/1000
+      X-Rate-Limit-Reset:
+      - 1472706031/1472774400
+      X-Rate-Limit-Remaining:
+      - 96/947
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Date:
+      - Thu, 01 Sep 2016 04:59:34 GMT
+      Content-Length:
+      - '115'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"data":{"uid":"04ddbd35d57d4d7b8f07f219c44457b2","aid":"b6951bf387b84f63b38911ae35d65e28","properties":"mno=pqr"}}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 04:59:34 GMT
+recorded_with: VCR 3.0.3

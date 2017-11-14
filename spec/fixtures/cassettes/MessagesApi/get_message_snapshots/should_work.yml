@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.artik.cloud/v1.1/messages/snapshots?sdids=19da42ee01414722a6ad1224097c38d4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer fa460261b858484583097ecb331faaa8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Request-Time:
+      - '0.045'
+      X-Rate-Limit-Limit:
+      - 100/1000
+      X-Rate-Limit-Reset:
+      - 1472793369/1472860800
+      X-Rate-Limit-Remaining:
+      - 99/999
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Date:
+      - Fri, 02 Sep 2016 05:15:09 GMT
+      Content-Length:
+      - '204'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sdids":"19da42ee01414722a6ad1224097c38d4","size":1,"data":[{"sdid":"19da42ee01414722a6ad1224097c38d4","data":{"distance":{"ts":1472249671454,"value":850.745},"steps":{"ts":1472792594163,"value":500}}}]}'
+    http_version: 
+  recorded_at: Fri, 02 Sep 2016 05:15:09 GMT
+recorded_with: VCR 3.0.3

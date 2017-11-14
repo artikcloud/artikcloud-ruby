@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.artik.cloud/v1.1/accounts/tokenInfo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer fa460261b858484583097ecb331faaa8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 31 Aug 2016 04:11:54 GMT
+      Content-Length:
+      - '122'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"data":{"user_id":"04ddbd35d57d4d7b8f07f219c44457b2","client_id":"b6951bf387b84f63b38911ae35d65e28","expires_in":224617}}'
+    http_version: 
+  recorded_at: Wed, 31 Aug 2016 04:11:54 GMT
+recorded_with: VCR 3.0.3

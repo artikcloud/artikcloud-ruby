@@ -1,0 +1,87 @@
+PATH
+  remote: .
+  specs:
+    artikcloud (2.0.8)
+      json (~> 1.8, >= 1.8.3)
+      typhoeus (~> 1.0, >= 1.0.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    ZenTest (4.11.0)
+    activesupport (5.0.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    addressable (2.4.0)
+    autotest (4.4.6)
+      ZenTest (>= 4.4.1)
+    autotest-fsevent (0.2.11)
+      sys-uname
+    autotest-growl (0.2.16)
+    autotest-rails-pure (4.1.2)
+    coderay (1.1.1)
+    concurrent-ruby (1.0.2)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    diff-lcs (1.2.5)
+    ethon (0.9.0)
+      ffi (>= 1.3.0)
+    factory_girl (4.7.0)
+      activesupport (>= 3.0.0)
+    ffi (1.9.10)
+    hashdiff (0.3.0)
+    i18n (0.7.0)
+    json (1.8.3)
+    method_source (0.8.2)
+    minitest (5.9.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    safe_yaml (1.0.4)
+    slop (3.6.0)
+    sys-uname (1.0.2)
+      ffi (>= 1.0.0)
+    thread_safe (0.3.5)
+    typhoeus (1.1.0)
+      ethon (>= 0.9.0)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    vcr (3.0.3)
+    webmock (1.24.6)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  artikcloud!
+  autotest (~> 4.4, >= 4.4.6)
+  autotest-fsevent (~> 0.2, >= 0.2.11)
+  autotest-growl (~> 0.2, >= 0.2.16)
+  autotest-rails-pure (~> 4.1, >= 4.1.2)
+  factory_girl (~> 4.8, >= 4.8.0)
+  pry (~> 0.10, >= 0.10.3)
+  rspec (~> 3.4, >= 3.4.0)
+  vcr (~> 3.0, >= 3.0.1)
+  webmock (~> 1.24, >= 1.24.3)
+
+BUNDLED WITH
+   1.12.5

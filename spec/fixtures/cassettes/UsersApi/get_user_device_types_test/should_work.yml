@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.artik.cloud/v1.1/users/04ddbd35d57d4d7b8f07f219c44457b2/devicetypes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer fa460261b858484583097ecb331faaa8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Rate-Limit-Limit:
+      - 100/1000
+      X-Rate-Limit-Reset:
+      - 1472706031/1472774400
+      X-Rate-Limit-Remaining:
+      - 97/948
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Date:
+      - Thu, 01 Sep 2016 04:59:33 GMT
+      Content-Length:
+      - '3947'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"data":{"deviceTypes":[{"id":"dt9f44d55592654d0fab2e8b15259471ea","oid":"a2c153df2b7c4f31bcf79dd2aec157dd","uid":"04ddbd35d57d4d7b8f07f219c44457b2","name":"CloudDeviceType","published":false,"approved":false,"protected":true,"latestVersion":0,"uniqueName":"io.samsungsami.cloud.testdt","vid":"0","rsp":false,"issuerDn":null,"description":null,"inStore":false,"hasCloudConnector":false,"billingSubscriptionId":"sub_8Ff3ISYJKVVxpG","lastUpdated":1460399175000},{"id":"dtb9ac6a046cc743feb65a793f1b84ab78","oid":"a2c153df2b7c4f31bcf79dd2aec157dd","uid":"04ddbd35d57d4d7b8f07f219c44457b2","name":"Custom
+        Expensive Device Type","published":true,"approved":true,"protected":true,"latestVersion":1,"uniqueName":"cloud.artik.custom.expensivedevicetype","vid":"0","rsp":false,"issuerDn":null,"description":"Has
+        a bunch of test information to share with the world","tags":[{"name":"automotive","isCategory":true},{"name":"car","isCategory":false},{"name":"caprese","isCategory":false},{"name":"management","isCategory":false}],"inStore":false,"hasCloudConnector":false,"billingSubscriptionId":"sub_8Ff475JF1UvuPz","lastUpdated":1461766419000},{"id":"dtc70e7c8934ed4d0abebdb23d23469eab","oid":"a2c153df2b7c4f31bcf79dd2aec157dd","uid":"04ddbd35d57d4d7b8f07f219c44457b2","name":"DMPedometer","published":false,"approved":true,"protected":true,"latestVersion":1,"uniqueName":"cloud.artik.dm.pedometer","vid":"0","rsp":false,"issuerDn":null,"description":null,"inStore":false,"hasCloudConnector":false,"billingSubscriptionId":"sub_8gJfVqrvB5YUjf","lastUpdated":1466546886000},{"id":"dta8ad42083f33441b8677e5b36f049a4b","oid":"a2c153df2b7c4f31bcf79dd2aec157dd","uid":"04ddbd35d57d4d7b8f07f219c44457b2","name":"MyPedoMeter","published":true,"approved":true,"protected":true,"latestVersion":1,"uniqueName":"com.samsung.ssic.mypedometer","vid":"0","rsp":false,"issuerDn":null,"description":"Simple
+        Pedometer Device Type that tracks steps and distance","tags":[{"name":"health","isCategory":true},{"name":"running","isCategory":false},{"name":"sensors","isCategory":false}],"inStore":false,"hasCloudConnector":false,"billingSubscriptionId":"sub_8Ff8uoCj554MKu","lastUpdated":1461766424000},{"id":"dt0426f45704ac42eda15175b1e59a52b6","oid":"a2c153df2b7c4f31bcf79dd2aec157dd","uid":"04ddbd35d57d4d7b8f07f219c44457b2","name":"SecurePedometer","published":true,"approved":true,"protected":true,"latestVersion":1,"uniqueName":"securepedometer","vid":"0","rsp":true,"issuerDn":"67789a5fd43ad852a28c286f43939a37","description":null,"inStore":false,"hasCloudConnector":false,"billingSubscriptionId":"sub_8FfBZJ6cHPCgUU","lastUpdated":1461766428000},{"id":"dt960d1f84e44c4404b43a1c9493cdbb19","oid":"a2c153df2b7c4f31bcf79dd2aec157dd","uid":"04ddbd35d57d4d7b8f07f219c44457b2","name":"testac","published":false,"approved":false,"protected":true,"latestVersion":1,"uniqueName":"com.samsung.sami.testshac2","vid":"0","rsp":false,"issuerDn":null,"description":null,"inStore":false,"hasCloudConnector":false,"billingSubscriptionId":"sub_8FfJLDCI2XU4Vl","lastUpdated":1460400096000},{"id":"dte364dce0512142dfb1733329b82a5a5d","oid":"a2c153df2b7c4f31bcf79dd2aec157dd","uid":"04ddbd35d57d4d7b8f07f219c44457b2","name":"TestAirConditioner","published":false,"approved":true,"protected":true,"latestVersion":1,"uniqueName":"com.samsungtest.testairconditioner","vid":"0","rsp":false,"issuerDn":null,"description":null,"inStore":false,"hasCloudConnector":false,"billingSubscriptionId":"sub_8FfJGosIMF6ii7","lastUpdated":1460400097000},{"id":"dt8399fcebc37e44658a5b00495b61ec9d","oid":"a2c153df2b7c4f31bcf79dd2aec157dd","uid":"04ddbd35d57d4d7b8f07f219c44457b2","name":"TizenTV","published":false,"approved":true,"protected":true,"latestVersion":7,"uniqueName":"io.samsungsami.tizentv","vid":"0","rsp":false,"issuerDn":null,"description":null,"inStore":false,"hasCloudConnector":false,"billingSubscriptionId":"sub_8FfKEYeJAH1kXH","lastUpdated":1460400153000}]},"total":8,"offset":0,"count":8}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 04:59:33 GMT
+recorded_with: VCR 3.0.3

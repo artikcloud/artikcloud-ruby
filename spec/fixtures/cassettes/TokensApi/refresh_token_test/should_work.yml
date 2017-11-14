@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.artik.cloud/v1.1/accounts/token
+    body:
+      encoding: UTF-8
+      string: grant_type=refresh_token&refresh_token=bb90333ae
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer fa460261b858484583097ecb331faaa8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-store
+      Date:
+      - Thu, 01 Sep 2016 05:47:23 GMT
+      Content-Length:
+      - '88'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"invalid_request","message":"This API works only with
+        implicit apps."}}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 05:47:23 GMT
+recorded_with: VCR 3.0.3

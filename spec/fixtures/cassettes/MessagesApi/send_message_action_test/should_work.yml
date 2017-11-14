@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.artik.cloud/v1.1/messages
+    body:
+      encoding: UTF-8
+      string: '{"data":{"steps":500},"sdid":"19da42ee01414722a6ad1224097c38d4","ts":1472709681896.5461,"type":"message"}'
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer dc43d12e2b59495daf94631e6ddfe3e8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Quota-Reset:
+      - 1472688000/1472774400
+      X-Rate-Limit-Limit:
+      - 100/100000
+      X-Quota-Max-Payload-Size:
+      - '1024'
+      X-Rate-Limit-Remaining:
+      - 98/99973
+      X-Rate-Limit-Reset:
+      - 1472709713/1472774400
+      Content-Type:
+      - application/json
+      X-Quota-Daily-Messages:
+      - 27/150
+      Content-Length:
+      - '51'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"data":{"mid":"ff7cd85bfeb041be831b201c3e4ca2d1"}}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 06:01:24 GMT
+- request:
+    method: get
+    uri: https://api.artik.cloud/v1.1/messages?mid=ff7cd85bfeb041be831b201c3e4ca2d1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer dc43d12e2b59495daf94631e6ddfe3e8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - "*"
+      Content-Type:
+      - application/json
+      Request-Time:
+      - '0.155'
+      X-Rate-Limit-Limit:
+      - 100/1000
+      X-Rate-Limit-Reset:
+      - 1472709716/1472774400
+      X-Rate-Limit-Remaining:
+      - 98/974
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Date:
+      - Thu, 01 Sep 2016 06:01:27 GMT
+      Content-Length:
+      - '407'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"mid":"ff7cd85bfeb041be831b201c3e4ca2d1","uid":"04ddbd35d57d4d7b8f07f219c44457b2","sdid":"19da42ee01414722a6ad1224097c38d4","count":100,"order":"asc","size":1,"data":[{"mid":"ff7cd85bfeb041be831b201c3e4ca2d1","data":{"steps":500},"ts":1472709681896,"sdtid":"dta8ad42083f33441b8677e5b36f049a4b","cts":1472709684079,"uid":"04ddbd35d57d4d7b8f07f219c44457b2","mv":1,"sdid":"19da42ee01414722a6ad1224097c38d4"}]}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 06:01:27 GMT
+recorded_with: VCR 3.0.3

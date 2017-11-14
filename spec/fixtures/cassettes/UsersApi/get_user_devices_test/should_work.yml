@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.artik.cloud/v1.1/users/04ddbd35d57d4d7b8f07f219c44457b2/devices
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swagger-Codegen/2.0.5/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer fa460261b858484583097ecb331faaa8
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Allow:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Rate-Limit-Limit:
+      - 100/1000
+      X-Rate-Limit-Reset:
+      - 1472706031/1472774400
+      X-Rate-Limit-Remaining:
+      - 98/949
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Date:
+      - Thu, 01 Sep 2016 04:59:32 GMT
+      Content-Length:
+      - '3868'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"data":{"devices":[{"id":"1340f16ae1614c3194d04282b10da588","dtid":"dtc70e7c8934ed4d0abebdb23d23469eab","name":"DMPedometer1","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1472509051000,"connected":true},{"id":"ebc10fcfe71048f1b7a07ea16604fb0c","dtid":"dt548080e90be144f080ce28b26be62929","name":"dt548080e90be144f080ce28b26be62929","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"AUTHORIZED","createdOn":1460580896000,"connected":true},{"id":"d660278e6f044a57986bb0f79d364e7f","dtid":"dt8e71cabde68b4028b106832247cd6d72","name":"dt8e71cabde68b4028b106832247cd6d72","manifestVersion":8,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"AUTHORIZED","createdOn":1460581499000,"connected":true},{"id":"db297fc94e3a4e609150806dbd23be12","dtid":"dt9ad7ecfd34324765a9b12ef98a51b29e","name":"dt9ad7ecfd34324765a9b12ef98a51b29e","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1461713067000,"connected":true},{"id":"16f54be9b9ce4c69be14a6c8ff33ea8d","dtid":"dta8ad42083f33441b8677e5b36f049a4b","name":"dta8ad42083f33441b8677e5b36f049a4b","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1461713066000,"connected":true},{"id":"56e7961fff174920bcbcc1783083b2aa","dtid":"sami_gear_fit","name":"MSPedometer","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1472512058000,"connected":true},{"id":"650168ebd77f467ab520011466ae36ba","dtid":"dta8ad42083f33441b8677e5b36f049a4b","name":"MyPedoMeter2","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1464723603000,"connected":true},{"id":"23a9f6d62d7246a893e66ad6f79fc8da","dtid":"dta8ad42083f33441b8677e5b36f049a4b","name":"MyPedoMeter2","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1464723625000,"connected":true},{"id":"19da42ee01414722a6ad1224097c38d4","dtid":"dta8ad42083f33441b8677e5b36f049a4b","name":"MyPedoMeter2","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1464723620000,"connected":true},{"id":"f4c87a1c0fe54a5caffcc19b25a8502d","dtid":"dtfa43cc4901e24208976cdcc75c190188","name":"SAMI
+        Example IoT DIY Sensor","manifestVersion":3,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1464720244000,"connected":true},{"id":"5c97745b1e7a4beb96edd583ad595884","dtid":"dt8399fcebc37e44658a5b00495b61ec9d","name":"TizenTV1","manifestVersion":7,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1471990707000,"connected":true},{"id":"3dd34bce025a4409ac1ff80be81b8dbc","dtid":"vitalconnect_module","name":"Vital
+        Connect Module","manifestVersion":1,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"NO_AUTHORIZATION","createdOn":1464372417000,"connected":true},{"id":"7d7c13c66367427886c219364fdf5bae","dtid":"dt29673f0481b4401bb73a622353b96150","name":"Withings
+        Device","manifestVersion":5,"manifestVersionPolicy":"LATEST","needProviderAuth":false,"cloudAuthorization":"AUTHORIZED","createdOn":1460418313000,"connected":true},{"id":"5f1d6d85ad0141f3b9a07f0107dbd704","dtid":"dt29673f0481b4401bb73a622353b96150","name":"Withings2","manifestVersion":5,"manifestVersionPolicy":"LATEST","needProviderAuth":true,"cloudAuthorization":"UNAUTHORIZED","createdOn":1464207328000,"connected":true}]},"total":14,"offset":0,"count":14}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 04:59:32 GMT
+recorded_with: VCR 3.0.3
