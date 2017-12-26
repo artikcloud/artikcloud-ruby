@@ -18,15 +18,15 @@ gem build artikcloud.gemspec
 Then either install the gem locally:
 
 ```shell
-gem install ./artikcloud-2.1.1.gem
+gem install ./artikcloud-2.2.2.gem
 ```
-(for development, run `gem install --dev ./artikcloud-2.1.1.gem` to install the development dependencies)
+(for development, run `gem install --dev ./artikcloud-2.2.2.gem` to install the development dependencies)
 
 or publish the gem to a gem hosting service, e.g. [RubyGems](https://rubygems.org/).
 
 Finally add this to the Gemfile:
 
-    gem 'artikcloud', '~> 2.1.1'
+    gem 'artikcloud', '~> 2.2.2'
 
 ### Install from Git
 
@@ -125,6 +125,11 @@ Class | Method | HTTP request | Description
 *ArtikCloud::MessagesApi* | [**get_normalized_messages**](docs/MessagesApi.md#get_normalized_messages) | **GET** /messages | Get Normalized Messages
 *ArtikCloud::MessagesApi* | [**send_actions**](docs/MessagesApi.md#send_actions) | **POST** /actions | Send Actions
 *ArtikCloud::MessagesApi* | [**send_message**](docs/MessagesApi.md#send_message) | **POST** /messages | Send Message
+*ArtikCloud::MonetizationApi* | [**create_pricing_tiers**](docs/MonetizationApi.md#create_pricing_tiers) | **POST** /pricing/devicetypes/{dtid}/pricingtiers | Define devicetype's pricing tiers.
+*ArtikCloud::MonetizationApi* | [**get_pricing_tiers**](docs/MonetizationApi.md#get_pricing_tiers) | **GET** /pricing/devices/{did}/pricingtiers | Get a device's pricing tiers
+*ArtikCloud::MonetizationApi* | [**get_the__pricing_tiers**](docs/MonetizationApi.md#get_the__pricing_tiers) | **GET** /pricing/devicetypes/{dtid}/pricingtiers | Get devicetype's pricing tiers.
+*ArtikCloud::MonetizationApi* | [**get_upgrade_path**](docs/MonetizationApi.md#get_upgrade_path) | **GET** /pricing/devices/{did}/revenueshare/upgradepath | Get upgrade path
+*ArtikCloud::MonetizationApi* | [**set_pricing_tier**](docs/MonetizationApi.md#set_pricing_tier) | **PUT** /pricing/devices/{did}/pricingtiers | Set a device's pricing tier
 *ArtikCloud::RegistrationsApi* | [**confirm_user**](docs/RegistrationsApi.md#confirm_user) | **PUT** /devices/registrations/pin | Confirm User
 *ArtikCloud::RegistrationsApi* | [**get_request_status_for_user**](docs/RegistrationsApi.md#get_request_status_for_user) | **GET** /devices/registrations/{requestId}/status | Get Request Status For User
 *ArtikCloud::RegistrationsApi* | [**unregister_device**](docs/RegistrationsApi.md#unregister_device) | **DELETE** /devices/{deviceId}/registrations | Unregister Device
@@ -153,6 +158,15 @@ Class | Method | HTTP request | Description
 *ArtikCloud::UsersApi* | [**get_user_rules**](docs/UsersApi.md#get_user_rules) | **GET** /users/{userId}/rules | Get User Rules
 *ArtikCloud::UsersApi* | [**list_all_shares_for_user**](docs/UsersApi.md#list_all_shares_for_user) | **GET** /users/{userId}/shares | Get User shares
 *ArtikCloud::UsersApi* | [**update_user_properties**](docs/UsersApi.md#update_user_properties) | **PUT** /users/{userId}/properties | Update User Application Properties
+*ArtikCloud::WhitelistingApi* | [**delete_vdid**](docs/WhitelistingApi.md#delete_vdid) | **DELETE** /devicetypes/{dtid}/whitelist/{vdid} | Delete a vdid from the devicetype whitelist.
+*ArtikCloud::WhitelistingApi* | [**delete_whitelist_certificate**](docs/WhitelistingApi.md#delete_whitelist_certificate) | **DELETE** /devicetypes/{dtid}/whitelist/certificates/{cid} | Delete a whitelist certificate associated with a devicetype.
+*ArtikCloud::WhitelistingApi* | [**enable_whitelist**](docs/WhitelistingApi.md#enable_whitelist) | **PUT** /devicetypes/:dtid/whitelist/enable | Enable or disble whitelist feature of a device type
+*ArtikCloud::WhitelistingApi* | [**get_rejected_row_list**](docs/WhitelistingApi.md#get_rejected_row_list) | **GET** /devicetypes/{dtid}/whitelist/{uploadId}/rejectedRows | Get the list of rejected rows for an uploaded CSV file.
+*ArtikCloud::WhitelistingApi* | [**get_upload_status**](docs/WhitelistingApi.md#get_upload_status) | **GET** /devicetypes/{dtid}/whitelist/{uploadId}/status | Get the status of a uploaded CSV file.
+*ArtikCloud::WhitelistingApi* | [**get_whitelist**](docs/WhitelistingApi.md#get_whitelist) | **GET** /devicetypes/{dtid}/whitelist | Get whitelisted vdids of a device type.
+*ArtikCloud::WhitelistingApi* | [**get_whitelist_certificate**](docs/WhitelistingApi.md#get_whitelist_certificate) | **GET** /devicetypes/{dtid}/whitelist/certificates | Get whitelist certificate of device type.
+*ArtikCloud::WhitelistingApi* | [**get_whitelist_status**](docs/WhitelistingApi.md#get_whitelist_status) | **GET** /devicetypes/{dtid}/whitelist/status | Get the status of whitelist feature (enabled/disabled) of a device type.
+*ArtikCloud::WhitelistingApi* | [**upload_csv**](docs/WhitelistingApi.md#upload_csv) | **POST** /devicetypes/{dtid}/whitelist | Upload a CSV file related to the Device Type.
 
 
 ## Documentation for Models
@@ -171,11 +185,21 @@ Class | Method | HTTP request | Description
  - [ArtikCloud::AggregatesHistogramResponse](docs/AggregatesHistogramResponse.md)
  - [ArtikCloud::AggregatesResponse](docs/AggregatesResponse.md)
  - [ArtikCloud::AppProperties](docs/AppProperties.md)
+ - [ArtikCloud::CertificateData](docs/CertificateData.md)
+ - [ArtikCloud::CertificateEnvelope](docs/CertificateEnvelope.md)
+ - [ArtikCloud::CertificateFields](docs/CertificateFields.md)
+ - [ArtikCloud::CertificateId](docs/CertificateId.md)
  - [ArtikCloud::CheckTokenMessage](docs/CheckTokenMessage.md)
  - [ArtikCloud::CheckTokenResponse](docs/CheckTokenResponse.md)
+ - [ArtikCloud::ContactInfo](docs/ContactInfo.md)
  - [ArtikCloud::Device](docs/Device.md)
  - [ArtikCloud::DeviceArray](docs/DeviceArray.md)
  - [ArtikCloud::DeviceEnvelope](docs/DeviceEnvelope.md)
+ - [ArtikCloud::DevicePricingTier](docs/DevicePricingTier.md)
+ - [ArtikCloud::DevicePricingTierEnvelope](docs/DevicePricingTierEnvelope.md)
+ - [ArtikCloud::DevicePricingTierRequest](docs/DevicePricingTierRequest.md)
+ - [ArtikCloud::DevicePricingTiers](docs/DevicePricingTiers.md)
+ - [ArtikCloud::DevicePricingTiersEnvelope](docs/DevicePricingTiersEnvelope.md)
  - [ArtikCloud::DeviceRegCompleteRequest](docs/DeviceRegCompleteRequest.md)
  - [ArtikCloud::DeviceRegConfirmUserRequest](docs/DeviceRegConfirmUserRequest.md)
  - [ArtikCloud::DeviceRegConfirmUserResponse](docs/DeviceRegConfirmUserResponse.md)
@@ -202,6 +226,10 @@ Class | Method | HTTP request | Description
  - [ArtikCloud::DeviceTypeEnvelope](docs/DeviceTypeEnvelope.md)
  - [ArtikCloud::DeviceTypeInfo](docs/DeviceTypeInfo.md)
  - [ArtikCloud::DeviceTypeInfoEnvelope](docs/DeviceTypeInfoEnvelope.md)
+ - [ArtikCloud::DeviceTypePricingList](docs/DeviceTypePricingList.md)
+ - [ArtikCloud::DeviceTypePricingTier](docs/DeviceTypePricingTier.md)
+ - [ArtikCloud::DeviceTypePricingTiersEnvelope](docs/DeviceTypePricingTiersEnvelope.md)
+ - [ArtikCloud::DeviceTypeUpdateInput](docs/DeviceTypeUpdateInput.md)
  - [ArtikCloud::DeviceTypesEnvelope](docs/DeviceTypesEnvelope.md)
  - [ArtikCloud::DeviceTypesInfo](docs/DeviceTypesInfo.md)
  - [ArtikCloud::DeviceTypesInfoEnvelope](docs/DeviceTypesInfoEnvelope.md)
@@ -249,6 +277,8 @@ Class | Method | HTTP request | Description
  - [ArtikCloud::PropertiesEnvelope](docs/PropertiesEnvelope.md)
  - [ArtikCloud::RefreshTokenResponse](docs/RefreshTokenResponse.md)
  - [ArtikCloud::RegisterMessage](docs/RegisterMessage.md)
+ - [ArtikCloud::RejectedCSVRow](docs/RejectedCSVRow.md)
+ - [ArtikCloud::RejectedCSVRowsEnvelope](docs/RejectedCSVRowsEnvelope.md)
  - [ArtikCloud::RuleArray](docs/RuleArray.md)
  - [ArtikCloud::RuleCreationInfo](docs/RuleCreationInfo.md)
  - [ArtikCloud::RuleEnvelope](docs/RuleEnvelope.md)
@@ -286,6 +316,7 @@ Class | Method | HTTP request | Description
  - [ArtikCloud::TaskUpdateRequest](docs/TaskUpdateRequest.md)
  - [ArtikCloud::TaskUpdateResponse](docs/TaskUpdateResponse.md)
  - [ArtikCloud::TasksStatusCounts](docs/TasksStatusCounts.md)
+ - [ArtikCloud::Tier](docs/Tier.md)
  - [ArtikCloud::Token](docs/Token.md)
  - [ArtikCloud::TokenInfo](docs/TokenInfo.md)
  - [ArtikCloud::TokenInfoSuccessResponse](docs/TokenInfoSuccessResponse.md)
@@ -294,10 +325,20 @@ Class | Method | HTTP request | Description
  - [ArtikCloud::UnregisterDeviceResponse](docs/UnregisterDeviceResponse.md)
  - [ArtikCloud::UnregisterDeviceResponseEnvelope](docs/UnregisterDeviceResponseEnvelope.md)
  - [ArtikCloud::UpdateParameters](docs/UpdateParameters.md)
+ - [ArtikCloud::UpgradePath](docs/UpgradePath.md)
+ - [ArtikCloud::UpgradePathEnvelope](docs/UpgradePathEnvelope.md)
+ - [ArtikCloud::UpgradePathUserToken](docs/UpgradePathUserToken.md)
+ - [ArtikCloud::UpgradePathUserTokenEnvelope](docs/UpgradePathUserTokenEnvelope.md)
+ - [ArtikCloud::UploadIdEnvelope](docs/UploadIdEnvelope.md)
+ - [ArtikCloud::UploadStatusEnvelope](docs/UploadStatusEnvelope.md)
  - [ArtikCloud::User](docs/User.md)
  - [ArtikCloud::UserEnvelope](docs/UserEnvelope.md)
  - [ArtikCloud::ValidationCallbackInfo](docs/ValidationCallbackInfo.md)
+ - [ArtikCloud::ValidityPeriod](docs/ValidityPeriod.md)
  - [ArtikCloud::WebSocketError](docs/WebSocketError.md)
+ - [ArtikCloud::Whitelist](docs/Whitelist.md)
+ - [ArtikCloud::WhitelistEnvelope](docs/WhitelistEnvelope.md)
+ - [ArtikCloud::WhitelistResultEnvelope](docs/WhitelistResultEnvelope.md)
 
 
 

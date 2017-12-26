@@ -14,6 +14,23 @@ require 'date'
 module ArtikCloud
   # Action received in a WebSocket.
   class ActionOut
+    attr_accessor :data
+
+    # Confirmation ID.
+    attr_accessor :cid
+
+    # Destination Device ID.
+    attr_accessor :ddid
+
+    # Source Device ID.
+    attr_accessor :sdid
+
+    # Timestamp (past, present or future). Defaults to current time if not provided.
+    attr_accessor :ts
+
+    # Type.
+    attr_accessor :type
+
     # Message ID.
     attr_accessor :mid
 
@@ -33,6 +50,12 @@ module ArtikCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'data' => :'data',
+        :'cid' => :'cid',
+        :'ddid' => :'ddid',
+        :'sdid' => :'sdid',
+        :'ts' => :'ts',
+        :'type' => :'type',
         :'mid' => :'mid',
         :'uid' => :'uid',
         :'sdtid' => :'sdtid',
@@ -44,6 +67,12 @@ module ArtikCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'data' => :'ActionDetailsArray',
+        :'cid' => :'String',
+        :'ddid' => :'String',
+        :'sdid' => :'String',
+        :'ts' => :'Integer',
+        :'type' => :'String',
         :'mid' => :'String',
         :'uid' => :'String',
         :'sdtid' => :'String',
@@ -59,6 +88,32 @@ module ArtikCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'data')
+        self.data = attributes[:'data']
+      end
+
+      if attributes.has_key?(:'cid')
+        self.cid = attributes[:'cid']
+      end
+
+      if attributes.has_key?(:'ddid')
+        self.ddid = attributes[:'ddid']
+      end
+
+      if attributes.has_key?(:'sdid')
+        self.sdid = attributes[:'sdid']
+      end
+
+      if attributes.has_key?(:'ts')
+        self.ts = attributes[:'ts']
+      end
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
+      else
+        self.type = "action"
+      end
 
       if attributes.has_key?(:'mid')
         self.mid = attributes[:'mid']
@@ -100,6 +155,12 @@ module ArtikCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          data == o.data &&
+          cid == o.cid &&
+          ddid == o.ddid &&
+          sdid == o.sdid &&
+          ts == o.ts &&
+          type == o.type &&
           mid == o.mid &&
           uid == o.uid &&
           sdtid == o.sdtid &&
@@ -116,7 +177,7 @@ module ArtikCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [mid, uid, sdtid, cts, mv].hash
+      [data, cid, ddid, sdid, ts, type, mid, uid, sdtid, cts, mv].hash
     end
 
     # Builds the object from hash

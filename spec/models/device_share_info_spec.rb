@@ -31,7 +31,7 @@ describe 'DeviceShareInfo' do
       expect(@instance).to be_instance_of(ArtikCloud::DeviceShareInfo)
     end
   end
-  describe 'test attribute "email"' do
+  describe 'test attribute "uid"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

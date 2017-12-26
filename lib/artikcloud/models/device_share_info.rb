@@ -15,20 +15,20 @@ module ArtikCloud
   # 
   class DeviceShareInfo
     # User email
-    attr_accessor :email
+    attr_accessor :uid
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'email' => :'email'
+        :'uid' => :'uid'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'email' => :'String'
+        :'uid' => :'String'
       }
     end
 
@@ -40,8 +40,8 @@ module ArtikCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'email')
-        self.email = attributes[:'email']
+      if attributes.has_key?(:'uid')
+        self.uid = attributes[:'uid']
       end
 
     end
@@ -64,7 +64,7 @@ module ArtikCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          email == o.email
+          uid == o.uid
     end
 
     # @see the `==` method
@@ -76,7 +76,7 @@ module ArtikCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [email].hash
+      [uid].hash
     end
 
     # Builds the object from hash

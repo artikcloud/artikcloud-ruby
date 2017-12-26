@@ -42,6 +42,29 @@ module ArtikCloud
 
     attr_accessor :warning
 
+    attr_accessor :owner
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -59,7 +82,8 @@ module ArtikCloud
         :'name' => :'name',
         :'rule' => :'rule',
         :'uid' => :'uid',
-        :'warning' => :'warning'
+        :'warning' => :'warning',
+        :'owner' => :'owner'
       }
     end
 
@@ -79,7 +103,8 @@ module ArtikCloud
         :'name' => :'String',
         :'rule' => :'Hash<String, Object>',
         :'uid' => :'String',
-        :'warning' => :'RuleWarningOutput'
+        :'warning' => :'RuleWarningOutput',
+        :'owner' => :'String'
       }
     end
 
@@ -149,6 +174,10 @@ module ArtikCloud
         self.warning = attributes[:'warning']
       end
 
+      if attributes.has_key?(:'owner')
+        self.owner = attributes[:'owner']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -161,7 +190,19 @@ module ArtikCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      owner_validator = EnumAttributeValidator.new('String', ["user", "application"])
+      return false unless owner_validator.valid?(@owner)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] owner Object to be assigned
+    def owner=(owner)
+      validator = EnumAttributeValidator.new('String', ["user", "application"])
+      unless validator.valid?(owner)
+        fail ArgumentError, "invalid value for 'owner', must be one of #{validator.allowable_values}."
+      end
+      @owner = owner
     end
 
     # Checks equality by comparing each attribute.
@@ -182,7 +223,8 @@ module ArtikCloud
           name == o.name &&
           rule == o.rule &&
           uid == o.uid &&
-          warning == o.warning
+          warning == o.warning &&
+          owner == o.owner
     end
 
     # @see the `==` method
@@ -194,7 +236,7 @@ module ArtikCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [aid, created_on, description, enabled, error, id, index, invalidated_on, language_version, modified_on, name, rule, uid, warning].hash
+      [aid, created_on, description, enabled, error, id, index, invalidated_on, language_version, modified_on, name, rule, uid, warning, owner].hash
     end
 
     # Builds the object from hash

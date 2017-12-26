@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **rule** | **Hash&lt;String, Object&gt;** |  | [optional] 
 **uid** | **String** |  | [optional] 
 **warning** | [**RuleWarningOutput**](RuleWarningOutput.md) |  | [optional] 
+**owner** | **String** |  | [optional] 
 
 

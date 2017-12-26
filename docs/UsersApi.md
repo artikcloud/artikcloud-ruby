@@ -262,7 +262,8 @@ opts = {
   count: 56, # Integer | Desired count of items in the result set
   include_properties: true, # BOOLEAN | Optional. Boolean (true/false) - If false, only return the user's device types. If true, also return device types shared by other users.
   owner: "owner_example", # String | Return owned and/or shared devices. Default to ALL.
-  include_share_info: true # BOOLEAN | Include share info
+  include_share_info: true, # BOOLEAN | Include share info
+  dtid: "dtid_example" # String | Return only devices of this device type. If empty, assumes all device types allowed by the authorization.
 }
 
 begin
@@ -284,6 +285,7 @@ Name | Type | Description  | Notes
  **include_properties** | **BOOLEAN**| Optional. Boolean (true/false) - If false, only return the user&#39;s device types. If true, also return device types shared by other users. | [optional] 
  **owner** | **String**| Return owned and/or shared devices. Default to ALL. | [optional] 
  **include_share_info** | **BOOLEAN**| Include share info | [optional] 
+ **dtid** | **String**| Return only devices of this device type. If empty, assumes all device types allowed by the authorization. | [optional] 
 
 ### Return type
 
@@ -380,7 +382,8 @@ user_id = "user_id_example" # String | User ID.
 opts = { 
   exclude_disabled: true, # BOOLEAN | Exclude disabled rules in the result.
   count: 56, # Integer | Desired count of items in the result set.
-  offset: 56 # Integer | Offset for pagination.
+  offset: 56, # Integer | Offset for pagination.
+  owner: "owner_example" # String | Rule owner
 }
 
 begin
@@ -400,6 +403,7 @@ Name | Type | Description  | Notes
  **exclude_disabled** | **BOOLEAN**| Exclude disabled rules in the result. | [optional] 
  **count** | **Integer**| Desired count of items in the result set. | [optional] 
  **offset** | **Integer**| Offset for pagination. | [optional] 
+ **owner** | **String**| Rule owner | [optional] 
 
 ### Return type
 

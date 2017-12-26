@@ -249,6 +249,7 @@ module ArtikCloud
     # @option opts [BOOLEAN] :include_properties Optional. Boolean (true/false) - If false, only return the user&#39;s device types. If true, also return device types shared by other users.
     # @option opts [String] :owner Return owned and/or shared devices. Default to ALL.
     # @option opts [BOOLEAN] :include_share_info Include share info
+    # @option opts [String] :dtid Return only devices of this device type. If empty, assumes all device types allowed by the authorization.
     # @return [DevicesEnvelope]
     def get_user_devices(user_id, opts = {})
       data, _status_code, _headers = get_user_devices_with_http_info(user_id, opts)
@@ -264,6 +265,7 @@ module ArtikCloud
     # @option opts [BOOLEAN] :include_properties Optional. Boolean (true/false) - If false, only return the user&#39;s device types. If true, also return device types shared by other users.
     # @option opts [String] :owner Return owned and/or shared devices. Default to ALL.
     # @option opts [BOOLEAN] :include_share_info Include share info
+    # @option opts [String] :dtid Return only devices of this device type. If empty, assumes all device types allowed by the authorization.
     # @return [Array<(DevicesEnvelope, Fixnum, Hash)>] DevicesEnvelope data, response status code and response headers
     def get_user_devices_with_http_info(user_id, opts = {})
       if @api_client.config.debugging
@@ -281,6 +283,7 @@ module ArtikCloud
       query_params[:'includeProperties'] = opts[:'include_properties'] if !opts[:'include_properties'].nil?
       query_params[:'owner'] = opts[:'owner'] if !opts[:'owner'].nil?
       query_params[:'includeShareInfo'] = opts[:'include_share_info'] if !opts[:'include_share_info'].nil?
+      query_params[:'dtid'] = opts[:'dtid'] if !opts[:'dtid'].nil?
 
       # header parameters
       header_params = {}
