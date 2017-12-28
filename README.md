@@ -4,6 +4,7 @@ ARTIK Cloud Ruby SDK
  [![Gem Version](https://badge.fury.io/rb/artikcloud.svg)](https://badge.fury.io/rb/artikcloud)
 
 This SDK helps you connect your Ruby scripts to ARTIK Cloud. The SDK exposes a number of methods to easily execute REST API calls to ARTIK Cloud.
+- Package version: 2.2.3
 
 ## Installation
 
@@ -18,15 +19,15 @@ gem build artikcloud.gemspec
 Then either install the gem locally:
 
 ```shell
-gem install ./artikcloud-2.2.2.gem
+gem install ./artikcloud-2.2.3.gem
 ```
-(for development, run `gem install --dev ./artikcloud-2.2.2.gem` to install the development dependencies)
+(for development, run `gem install --dev ./artikcloud-2.2.3.gem` to install the development dependencies)
 
 or publish the gem to a gem hosting service, e.g. [RubyGems](https://rubygems.org/).
 
 Finally add this to the Gemfile:
 
-    gem 'artikcloud', '~> 2.2.2'
+    gem 'artikcloud', '~> 2.2.3'
 
 ### Install from Git
 
